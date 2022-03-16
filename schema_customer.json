@@ -1,0 +1,801 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document. Generated online at https://www.jsonschema.net/home",
+    "default": {},
+    "examples": [
+        {
+            "type": "person",
+            "id": 1,
+            "basicInfo": {
+                "demographics": {
+                    "age": "20,25",
+                    "gender": "male/female/customString",
+                    "income": "100000",
+                    "educationType": "HS/BA/BS/MS/PHD/Trade/customString",
+                    "relationshipStatus": "married/single/divorced/"
+                },
+                "contactInfo": {
+                    "email": "fake@nothing.com",
+                    "telephone": "(425) 123-4567",
+                    "languagePreference": "Hindi",
+                    "deviceTypes": [
+                        "iphone",
+                        "macbook",
+                        "samsung galaxy"
+                    ]
+                }
+            },
+            "interests": {
+                "generalInterests": {
+                    "adInterests": "dessert",
+                    "topic": "art",
+                    "adsViewed": "?"
+                },
+                "music": "classical",
+                "books": "book of love",
+                "tv": "i love lucy",
+                "movies": "batman"
+            },
+            "purchases": {
+                "generalPurchasingBehavior": {
+                    "preferredCurrency": "USD",
+                    "paymentMethodsUsed": [
+                        "cash",
+                        "creditCard"
+                    ],
+                    "loyaltyMerchantName": "?"
+                },
+                "categoriesShopped": {
+                    "merchantCategoriesShopped": "?",
+                    "merchantSubcategoriesShopped": "?"
+                },
+                "spendAndTimeSeries": {
+                    "amountSpent": "100",
+                    "averageTicketSize": "?",
+                    "growthInSpend": "?"
+                }
+            },
+            "locational": {
+                "generalLocation": {
+                    "primaryLocation": "?",
+                    "hometown": "?",
+                    "followedLocations": "?"
+                },
+                "hyperLocal": {
+                    "locationsVisited": [
+                        "NYC",
+                        "Las Vegas",
+                        "Disneyworld"
+                    ]
+                }
+            },
+            "colleague": [
+                "personId1",
+                "personID2"
+            ]
+        }
+    ],
+    "required": [
+        "type",
+        "id",
+        "basicInfo",
+        "interests",
+        "purchases",
+        "locational",
+        "colleague"
+    ],
+    "properties": {
+        "type": {
+            "$id": "#/properties/type",
+            "type": "string",
+            "title": "The type schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "person"
+            ]
+        },
+        "id": {
+            "$id": "#/properties/id",
+            "type": "integer",
+            "title": "The id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "basicInfo": {
+            "$id": "#/properties/basicInfo",
+            "type": "object",
+            "title": "The basicInfo schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "demographics": {
+                        "age": "20,25",
+                        "gender": "male/female/customString",
+                        "income": "100000",
+                        "educationType": "HS/BA/BS/MS/PHD/Trade/customString",
+                        "relationshipStatus": "married/single/divorced/"
+                    },
+                    "contactInfo": {
+                        "email": "fake@nothing.com",
+                        "telephone": "(425) 123-4567",
+                        "languagePreference": "Hindi",
+                        "deviceTypes": [
+                            "iphone",
+                            "macbook",
+                            "samsung galaxy"
+                        ]
+                    }
+                }
+            ],
+            "required": [
+                "demographics",
+                "contactInfo"
+            ],
+            "properties": {
+                "demographics": {
+                    "$id": "#/properties/basicInfo/properties/demographics",
+                    "type": "object",
+                    "title": "The demographics schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                        {
+                            "age": "20,25",
+                            "gender": "male/female/customString",
+                            "income": "100000",
+                            "educationType": "HS/BA/BS/MS/PHD/Trade/customString",
+                            "relationshipStatus": "married/single/divorced/"
+                        }
+                    ],
+                    "required": [
+                        "age",
+                        "gender",
+                        "income",
+                        "educationType",
+                        "relationshipStatus"
+                    ],
+                    "properties": {
+                        "age": {
+                            "$id": "#/properties/basicInfo/properties/demographics/properties/age",
+                            "type": "string",
+                            "title": "The age schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "20,25"
+                            ]
+                        },
+                        "gender": {
+                            "$id": "#/properties/basicInfo/properties/demographics/properties/gender",
+                            "type": "string",
+                            "title": "The gender schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "male/female/customString"
+                            ]
+                        },
+                        "income": {
+                            "$id": "#/properties/basicInfo/properties/demographics/properties/income",
+                            "type": "string",
+                            "title": "The income schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "100000"
+                            ]
+                        },
+                        "educationType": {
+                            "$id": "#/properties/basicInfo/properties/demographics/properties/educationType",
+                            "type": "string",
+                            "title": "The educationType schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "HS/BA/BS/MS/PHD/Trade/customString"
+                            ]
+                        },
+                        "relationshipStatus": {
+                            "$id": "#/properties/basicInfo/properties/demographics/properties/relationshipStatus",
+                            "type": "string",
+                            "title": "The relationshipStatus schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "married/single/divorced/"
+                            ]
+                        }
+                    },
+                    "additionalProperties": true
+                },
+                "contactInfo": {
+                    "$id": "#/properties/basicInfo/properties/contactInfo",
+                    "type": "object",
+                    "title": "The contactInfo schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                        {
+                            "email": "fake@nothing.com",
+                            "telephone": "(425) 123-4567",
+                            "languagePreference": "Hindi",
+                            "deviceTypes": [
+                                "iphone",
+                                "macbook",
+                                "samsung galaxy"
+                            ]
+                        }
+                    ],
+                    "required": [
+                        "email",
+                        "telephone",
+                        "languagePreference",
+                        "deviceTypes"
+                    ],
+                    "properties": {
+                        "email": {
+                            "$id": "#/properties/basicInfo/properties/contactInfo/properties/email",
+                            "type": "string",
+                            "title": "The email schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "fake@nothing.com"
+                            ]
+                        },
+                        "telephone": {
+                            "$id": "#/properties/basicInfo/properties/contactInfo/properties/telephone",
+                            "type": "string",
+                            "title": "The telephone schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "(425) 123-4567"
+                            ]
+                        },
+                        "languagePreference": {
+                            "$id": "#/properties/basicInfo/properties/contactInfo/properties/languagePreference",
+                            "type": "string",
+                            "title": "The languagePreference schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "Hindi"
+                            ]
+                        },
+                        "deviceTypes": {
+                            "$id": "#/properties/basicInfo/properties/contactInfo/properties/deviceTypes",
+                            "type": "array",
+                            "title": "The deviceTypes schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": [],
+                            "examples": [
+                                [
+                                    "iphone",
+                                    "macbook"
+                                ]
+                            ],
+                            "additionalItems": true,
+                            "items": {
+                                "$id": "#/properties/basicInfo/properties/contactInfo/properties/deviceTypes/items",
+                                "anyOf": [
+                                    {
+                                        "$id": "#/properties/basicInfo/properties/contactInfo/properties/deviceTypes/items/anyOf/0",
+                                        "type": "string",
+                                        "title": "The first anyOf schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "iphone",
+                                            "macbook"
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "additionalProperties": true
+                }
+            },
+            "additionalProperties": true
+        },
+        "interests": {
+            "$id": "#/properties/interests",
+            "type": "object",
+            "title": "The interests schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "generalInterests": {
+                        "adInterests": "dessert",
+                        "topic": "art",
+                        "adsViewed": "?"
+                    },
+                    "music": "classical",
+                    "books": "book of love",
+                    "tv": "i love lucy",
+                    "movies": "batman"
+                }
+            ],
+            "required": [
+                "generalInterests",
+                "music",
+                "books",
+                "tv",
+                "movies"
+            ],
+            "properties": {
+                "generalInterests": {
+                    "$id": "#/properties/interests/properties/generalInterests",
+                    "type": "object",
+                    "title": "The generalInterests schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                        {
+                            "adInterests": "dessert",
+                            "topic": "art",
+                            "adsViewed": "?"
+                        }
+                    ],
+                    "required": [
+                        "adInterests",
+                        "topic",
+                        "adsViewed"
+                    ],
+                    "properties": {
+                        "adInterests": {
+                            "$id": "#/properties/interests/properties/generalInterests/properties/adInterests",
+                            "type": "string",
+                            "title": "The adInterests schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "dessert"
+                            ]
+                        },
+                        "topic": {
+                            "$id": "#/properties/interests/properties/generalInterests/properties/topic",
+                            "type": "string",
+                            "title": "The topic schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "art"
+                            ]
+                        },
+                        "adsViewed": {
+                            "$id": "#/properties/interests/properties/generalInterests/properties/adsViewed",
+                            "type": "string",
+                            "title": "The adsViewed schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "?"
+                            ]
+                        }
+                    },
+                    "additionalProperties": true
+                },
+                "music": {
+                    "$id": "#/properties/interests/properties/music",
+                    "type": "string",
+                    "title": "The music schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "classical"
+                    ]
+                },
+                "books": {
+                    "$id": "#/properties/interests/properties/books",
+                    "type": "string",
+                    "title": "The books schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "book of love"
+                    ]
+                },
+                "tv": {
+                    "$id": "#/properties/interests/properties/tv",
+                    "type": "string",
+                    "title": "The tv schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "i love lucy"
+                    ]
+                },
+                "movies": {
+                    "$id": "#/properties/interests/properties/movies",
+                    "type": "string",
+                    "title": "The movies schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "batman"
+                    ]
+                }
+            },
+            "additionalProperties": true
+        },
+        "purchases": {
+            "$id": "#/properties/purchases",
+            "type": "object",
+            "title": "The purchases schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "generalPurchasingBehavior": {
+                        "preferredCurrency": "USD",
+                        "paymentMethodsUsed": [
+                            "cash",
+                            "creditCard"
+                        ],
+                        "loyaltyMerchantName": "?"
+                    },
+                    "categoriesShopped": {
+                        "merchantCategoriesShopped": "?",
+                        "merchantSubcategoriesShopped": "?"
+                    },
+                    "spendAndTimeSeries": {
+                        "amountSpent": "100",
+                        "averageTicketSize": "?",
+                        "growthInSpend": "?"
+                    }
+                }
+            ],
+            "required": [
+                "generalPurchasingBehavior",
+                "categoriesShopped",
+                "spendAndTimeSeries"
+            ],
+            "properties": {
+                "generalPurchasingBehavior": {
+                    "$id": "#/properties/purchases/properties/generalPurchasingBehavior",
+                    "type": "object",
+                    "title": "The generalPurchasingBehavior schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                        {
+                            "preferredCurrency": "USD",
+                            "paymentMethodsUsed": [
+                                "cash",
+                                "creditCard"
+                            ],
+                            "loyaltyMerchantName": "?"
+                        }
+                    ],
+                    "required": [
+                        "preferredCurrency",
+                        "paymentMethodsUsed",
+                        "loyaltyMerchantName"
+                    ],
+                    "properties": {
+                        "preferredCurrency": {
+                            "$id": "#/properties/purchases/properties/generalPurchasingBehavior/properties/preferredCurrency",
+                            "type": "string",
+                            "title": "The preferredCurrency schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "USD"
+                            ]
+                        },
+                        "paymentMethodsUsed": {
+                            "$id": "#/properties/purchases/properties/generalPurchasingBehavior/properties/paymentMethodsUsed",
+                            "type": "array",
+                            "title": "The paymentMethodsUsed schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": [],
+                            "examples": [
+                                [
+                                    "cash",
+                                    "creditCard"
+                                ]
+                            ],
+                            "additionalItems": true,
+                            "items": {
+                                "$id": "#/properties/purchases/properties/generalPurchasingBehavior/properties/paymentMethodsUsed/items",
+                                "anyOf": [
+                                    {
+                                        "$id": "#/properties/purchases/properties/generalPurchasingBehavior/properties/paymentMethodsUsed/items/anyOf/0",
+                                        "type": "string",
+                                        "title": "The first anyOf schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "cash",
+                                            "creditCard"
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        "loyaltyMerchantName": {
+                            "$id": "#/properties/purchases/properties/generalPurchasingBehavior/properties/loyaltyMerchantName",
+                            "type": "string",
+                            "title": "The loyaltyMerchantName schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "?"
+                            ]
+                        }
+                    },
+                    "additionalProperties": true
+                },
+                "categoriesShopped": {
+                    "$id": "#/properties/purchases/properties/categoriesShopped",
+                    "type": "object",
+                    "title": "The categoriesShopped schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                        {
+                            "merchantCategoriesShopped": "?",
+                            "merchantSubcategoriesShopped": "?"
+                        }
+                    ],
+                    "required": [
+                        "merchantCategoriesShopped",
+                        "merchantSubcategoriesShopped"
+                    ],
+                    "properties": {
+                        "merchantCategoriesShopped": {
+                            "$id": "#/properties/purchases/properties/categoriesShopped/properties/merchantCategoriesShopped",
+                            "type": "string",
+                            "title": "The merchantCategoriesShopped schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "?"
+                            ]
+                        },
+                        "merchantSubcategoriesShopped": {
+                            "$id": "#/properties/purchases/properties/categoriesShopped/properties/merchantSubcategoriesShopped",
+                            "type": "string",
+                            "title": "The merchantSubcategoriesShopped schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "?"
+                            ]
+                        }
+                    },
+                    "additionalProperties": true
+                },
+                "spendAndTimeSeries": {
+                    "$id": "#/properties/purchases/properties/spendAndTimeSeries",
+                    "type": "object",
+                    "title": "The spendAndTimeSeries schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                        {
+                            "amountSpent": "100",
+                            "averageTicketSize": "?",
+                            "growthInSpend": "?"
+                        }
+                    ],
+                    "required": [
+                        "amountSpent",
+                        "averageTicketSize",
+                        "growthInSpend"
+                    ],
+                    "properties": {
+                        "amountSpent": {
+                            "$id": "#/properties/purchases/properties/spendAndTimeSeries/properties/amountSpent",
+                            "type": "string",
+                            "title": "The amountSpent schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "100"
+                            ]
+                        },
+                        "averageTicketSize": {
+                            "$id": "#/properties/purchases/properties/spendAndTimeSeries/properties/averageTicketSize",
+                            "type": "string",
+                            "title": "The averageTicketSize schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "?"
+                            ]
+                        },
+                        "growthInSpend": {
+                            "$id": "#/properties/purchases/properties/spendAndTimeSeries/properties/growthInSpend",
+                            "type": "string",
+                            "title": "The growthInSpend schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "?"
+                            ]
+                        }
+                    },
+                    "additionalProperties": true
+                }
+            },
+            "additionalProperties": true
+        },
+        "locational": {
+            "$id": "#/properties/locational",
+            "type": "object",
+            "title": "The locational schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "generalLocation": {
+                        "primaryLocation": "?",
+                        "hometown": "?",
+                        "followedLocations": "?"
+                    },
+                    "hyperLocal": {
+                        "locationsVisited": [
+                            "NYC",
+                            "Las Vegas",
+                            "Disneyworld"
+                        ]
+                    }
+                }
+            ],
+            "required": [
+                "generalLocation",
+                "hyperLocal"
+            ],
+            "properties": {
+                "generalLocation": {
+                    "$id": "#/properties/locational/properties/generalLocation",
+                    "type": "object",
+                    "title": "The generalLocation schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                        {
+                            "primaryLocation": "?",
+                            "hometown": "?",
+                            "followedLocations": "?"
+                        }
+                    ],
+                    "required": [
+                        "primaryLocation",
+                        "hometown",
+                        "followedLocations"
+                    ],
+                    "properties": {
+                        "primaryLocation": {
+                            "$id": "#/properties/locational/properties/generalLocation/properties/primaryLocation",
+                            "type": "string",
+                            "title": "The primaryLocation schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "?"
+                            ]
+                        },
+                        "hometown": {
+                            "$id": "#/properties/locational/properties/generalLocation/properties/hometown",
+                            "type": "string",
+                            "title": "The hometown schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "?"
+                            ]
+                        },
+                        "followedLocations": {
+                            "$id": "#/properties/locational/properties/generalLocation/properties/followedLocations",
+                            "type": "string",
+                            "title": "The followedLocations schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "?"
+                            ]
+                        }
+                    },
+                    "additionalProperties": true
+                },
+                "hyperLocal": {
+                    "$id": "#/properties/locational/properties/hyperLocal",
+                    "type": "object",
+                    "title": "The hyperLocal schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                        {
+                            "locationsVisited": [
+                                "NYC",
+                                "Las Vegas",
+                                "Disneyworld"
+                            ]
+                        }
+                    ],
+                    "required": [
+                        "locationsVisited"
+                    ],
+                    "properties": {
+                        "locationsVisited": {
+                            "$id": "#/properties/locational/properties/hyperLocal/properties/locationsVisited",
+                            "type": "array",
+                            "title": "The locationsVisited schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": [],
+                            "examples": [
+                                [
+                                    "NYC",
+                                    "Las Vegas"
+                                ]
+                            ],
+                            "additionalItems": true,
+                            "items": {
+                                "$id": "#/properties/locational/properties/hyperLocal/properties/locationsVisited/items",
+                                "anyOf": [
+                                    {
+                                        "$id": "#/properties/locational/properties/hyperLocal/properties/locationsVisited/items/anyOf/0",
+                                        "type": "string",
+                                        "title": "The first anyOf schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "NYC",
+                                            "Las Vegas"
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "additionalProperties": true
+                }
+            },
+            "additionalProperties": true
+        },
+        "colleague": {
+            "$id": "#/properties/colleague",
+            "type": "array",
+            "title": "The colleague schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    "personId1",
+                    "personID2"
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/colleague/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/colleague/items/anyOf/0",
+                        "type": "string",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "personId1",
+                            "personID2"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "additionalProperties": true
+}
